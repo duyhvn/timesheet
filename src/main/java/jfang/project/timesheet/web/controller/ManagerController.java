@@ -7,6 +7,7 @@ import java.util.Set;
 
 import javax.annotation.Resource;
 
+import org.dozer.Mapper;
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.constant.ResponseStatus;
 import jfang.project.timesheet.model.Employee;
@@ -19,11 +20,13 @@ import jfang.project.timesheet.service.TimesheetService;
 import jfang.project.timesheet.service.UserService;
 import jfang.project.timesheet.web.dto.*;
 
-import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,17 +40,20 @@ public class ManagerController {
     @Autowired
     private Mapper mapper;
 
-    @Resource
+    @Autowired
     private UserService userService;
 
-    @Resource
+    @Autowired
     private HumanResourceService humanResourceService;
 
-    @Resource
+    @Autowired
     private ProjectService projectService;
 
-    @Resource
+    @Autowired
     private TimesheetService timesheetService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     /**
      * GET method to employee management page.
@@ -101,7 +107,7 @@ public class ManagerController {
     @RequestMapping(value="/employee/new", method=RequestMethod.POST)
     public AjaxResponseStatus addNewEmployee(@RequestBody NewEmployeeDto newEmployeeDto) {
         String username = newEmployeeDto.getUsername();
-        String password = newEmployeeDto.getPassword();
+        String password = passwordEncoder.encode(newEmployeeDto.getPassword());
         User user = new User(username, password, Constants.ROLE_EMPLOYEE);
         Long id = humanResourceService.registerNewEmployee(user);
 

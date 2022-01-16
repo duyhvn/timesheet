@@ -18,9 +18,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * Created by jfang on 11/22/15.
  */
-@Configuration
-@EnableTransactionManagement
-@EnableJpaRepositories("jfang.project.timesheet.repository")
+//@Configuration
+//@EnableTransactionManagement
+//@EnableJpaRepositories("jfang.project.timesheet.repository")
 public class DataAccessConfig {
 
     @Autowired
@@ -29,7 +29,7 @@ public class DataAccessConfig {
     @Autowired
     private DataSource dataSource;
 
-    @Bean
+   /* @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -52,6 +52,6 @@ public class DataAccessConfig {
         JpaTransactionManager txManager = new JpaTransactionManager();
         txManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return txManager;
-    }
+    }*/
 
 }

@@ -16,7 +16,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
@@ -24,23 +24,6 @@ public class DataSourceConfig {
     @Autowired
     private Environment env;
 
-    @Bean
-    @Profile("default")
-    public DataSource dataSource() {
-        logger.info("Using product dataSource.");
-
-        HikariConfig dataSourceConfig = new HikariConfig();
-        dataSourceConfig.setJdbcUrl(env.getRequiredProperty("db.url"));
-        dataSourceConfig.setUsername(env.getRequiredProperty("db.username"));
-        dataSourceConfig.setPassword(env.getRequiredProperty("db.password"));
-        dataSourceConfig.addDataSourceProperty("poolName", "hikariCP");
-        dataSourceConfig.addDataSourceProperty("connectionTestQuery", "SELECT 1");
-        dataSourceConfig.addDataSourceProperty("dataSourceClassName", env.getRequiredProperty("hikari.dataSourceClassName"));
-        dataSourceConfig.addDataSourceProperty("maximumPoolSize", env.getRequiredProperty("hikari.maximumPoolSize"));
-        dataSourceConfig.addDataSourceProperty("idleTimeout", env.getRequiredProperty("hikari.idleTimeout"));
-
-        return new HikariDataSource(dataSourceConfig);
-    }
     
     @Bean
     @Profile("test")

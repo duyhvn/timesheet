@@ -11,6 +11,7 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
+import org.springframework.cache.jcache.JCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -41,11 +42,11 @@ public class ServiceConfig {
         mapper.setMappingFiles(mappingFiles);
         return mapper;
     }
-    
+
     // ehcache
-    @Bean
+    /*@Bean
     public CacheManager cacheManager() {
-        return new EhCacheCacheManager(ehCacheCacheManager().getObject());
+        return new JCacheCacheManager(ehCacheCacheManager().getObject());
     }
 
     @Bean
@@ -54,5 +55,6 @@ public class ServiceConfig {
         cmfb.setConfigLocation(new ClassPathResource("ehcache.xml"));
         cmfb.setShared(true);
         return cmfb;
-    }
+    }*/
+
 }

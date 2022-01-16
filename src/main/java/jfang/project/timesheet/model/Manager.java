@@ -30,7 +30,7 @@ public class Manager implements Serializable {
     @JoinColumn(name="USER_ID")
     private User user;
 
-    @OneToMany(mappedBy="manager", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="manager", fetch = FetchType.LAZY)
     private List<Employee> employees = new ArrayList<Employee>();
 
     @OneToMany(mappedBy="manager", fetch = FetchType.EAGER)

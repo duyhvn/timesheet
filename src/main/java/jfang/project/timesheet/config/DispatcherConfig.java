@@ -11,11 +11,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /**
  * Created by jfang on 7/5/15.
  */
-@Configuration
+//@Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "jfang.project.timesheet.web")
 @Import({ThymeleafConfig.class})
-@PropertySource("classpath:ValidationMessages.properties")
 public class DispatcherConfig extends WebMvcConfigurerAdapter {
 
     @Override

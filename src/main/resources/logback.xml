@@ -11,13 +11,13 @@
 
     <!-- Send debug messages to a file at "c:/jcg.log" -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/Users/jfang/IdeaProjects/ACCApp/build/logback.log</file>
+        <file>/Users/admin/Documents/Demo/Timesheet/timesheet/build/logback.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <FileNamePattern>/Users/jfang/IdeaProjects/ACCApp/build/logback.%i.log.zip</FileNamePattern>
+            <FileNamePattern>/Users/admin/Documents/Demo/Timesheet/timesheet/build/logback.%i.log.zip</FileNamePattern>
             <MinIndex>1</MinIndex>
             <MaxIndex>3</MaxIndex>
         </rollingPolicy>

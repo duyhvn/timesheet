@@ -38,7 +38,7 @@ public class WeekSheet implements Serializable {
     private Date startDate;
 
     @OrderBy("date")
-    @OneToMany(mappedBy="weekSheet", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="weekSheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<DaySheet> sheets = new ArrayList<DaySheet>();
 
     @Column(name = "TOTAL_HOUR", nullable = false)

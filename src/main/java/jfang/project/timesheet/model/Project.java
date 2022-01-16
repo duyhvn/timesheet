@@ -25,7 +25,7 @@ public class Project implements Serializable {
     @JoinColumn(name="MANAGER_ID")
     private Manager manager;
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
     @JoinTable(name = "EMPLOYEE_PROJECT",
         joinColumns = @JoinColumn(name = "PROJECT_ID"),
         inverseJoinColumns = @JoinColumn(name = "EMPLOYEE_ID"))

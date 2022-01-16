@@ -9,7 +9,7 @@
         <title>Human Resource</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/timesheet/css/bootstrap-table.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap-table.min.css" />
     </head>
     <body>
         <div th:replace="fragments/header :: header"></div>
@@ -27,7 +27,7 @@
                 data-page-size="10"
                 data-page-list="[5,8,10,20,ALL]"
                 data-search="true"
-                data-url="/timesheet/admin/employee/data">
+                data-url="/admin/employee/data">
                 <thead>
                     <tr>
                         <th data-field="state" data-checkbox="true"></th>
@@ -57,7 +57,7 @@
                             <h4 id="myModalLabel">New Employee</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="new_employee_form" role="form" th:action="@{/admin/employee/new}" method="post">
+                            <form id="new_employee_form" role="presentation" th:action="@{/admin/employee/new}" method="post">
                                 <div class="form-group">
                                     <label for="new_employee_username">Username:</label>
                                     <input type="text" class="form-control" id="new_employee_username" name="username" autofocus="autofocus" />
@@ -131,7 +131,7 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
-        <script src="/timesheet/js/bootstrap-table.min.js"></script>
-        <script src="/timesheet/js/admin.js"></script>
+        <script src="/js/bootstrap-table.min.js"></script>
+        <script src="/js/admin.js"></script>
     </body>
 </html>
