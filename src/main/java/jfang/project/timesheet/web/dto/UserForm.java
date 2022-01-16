@@ -1,11 +1,10 @@
 package jfang.project.timesheet.web.dto;
 
-import java.io.Serializable;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import java.io.Serializable;
 
 public class UserForm implements Serializable {
 

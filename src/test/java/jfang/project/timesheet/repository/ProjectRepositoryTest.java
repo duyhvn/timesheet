@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import javax.annotation.Resource;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.model.Project;
 
 import org.junit.Test;

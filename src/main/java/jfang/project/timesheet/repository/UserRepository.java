@@ -1,7 +1,6 @@
 package jfang.project.timesheet.repository;
 
 import jfang.project.timesheet.model.User;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

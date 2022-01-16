@@ -1,17 +1,11 @@
 package jfang.project.timesheet.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.Resource;
-
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.model.Manager;
 import jfang.project.timesheet.model.User;
 import jfang.project.timesheet.repository.ManagerRepository;
 import jfang.project.timesheet.repository.UserRepository;
 import jfang.project.timesheet.utility.StringProecessUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -21,6 +15,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jfang on 5/9/15.

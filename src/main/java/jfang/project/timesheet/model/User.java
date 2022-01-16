@@ -1,7 +1,6 @@
 package jfang.project.timesheet.model;
 
-import java.io.Serializable;
-import java.util.Date;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-import org.hibernate.annotations.Type;
+import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "USER")

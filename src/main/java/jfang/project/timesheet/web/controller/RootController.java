@@ -1,15 +1,9 @@
 package jfang.project.timesheet.web.controller;
 
-import java.util.Date;
-
-import javax.annotation.Resource;
-import javax.validation.Valid;
-
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.model.User;
 import jfang.project.timesheet.service.UserService;
 import jfang.project.timesheet.web.dto.UserForm;
-
 import jfang.project.timesheet.web.exception.AjaxException;
 import org.dozer.Mapper;
 import org.slf4j.Logger;
@@ -28,6 +22,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.annotation.Resource;
+import javax.validation.Valid;
+import java.util.Date;
 
 @Controller
 public class RootController {

@@ -2,8 +2,6 @@ package jfang.project.timesheet.service;
 
 import static org.junit.Assert.assertEquals;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.config.ServiceConfig;
 import jfang.project.timesheet.model.Employee;
 import org.junit.Test;

@@ -8,8 +8,6 @@ import java.util.Date;
 
 import javax.annotation.Resource;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.config.ServiceConfig;
 import jfang.project.timesheet.model.Employee;
 import jfang.project.timesheet.model.WeekSheet;

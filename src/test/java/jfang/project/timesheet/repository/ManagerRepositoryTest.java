@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import javax.annotation.Resource;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.model.Manager;
 import jfang.project.timesheet.model.User;

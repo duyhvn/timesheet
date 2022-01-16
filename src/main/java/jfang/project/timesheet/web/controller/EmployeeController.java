@@ -1,11 +1,5 @@
 package jfang.project.timesheet.web.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import org.dozer.Mapper;
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.constant.ResponseStatus;
 import jfang.project.timesheet.model.Employee;
@@ -19,7 +13,7 @@ import jfang.project.timesheet.web.dto.AjaxResponseStatus;
 import jfang.project.timesheet.web.dto.WeekSheetPostDto;
 import jfang.project.timesheet.web.dto.WeekSheetQueryReqDto;
 import jfang.project.timesheet.web.dto.WeekSheetQueryRespDto;
-
+import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +26,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jfang on 7/7/15.

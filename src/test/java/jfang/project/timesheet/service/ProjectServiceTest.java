@@ -1,7 +1,5 @@
 package jfang.project.timesheet.service;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.config.ServiceConfig;
 import jfang.project.timesheet.model.Manager;
 import jfang.project.timesheet.model.Project;

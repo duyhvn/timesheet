@@ -1,9 +1,9 @@
 package jfang.project.timesheet.service;
 
-import java.util.List;
-
 import jfang.project.timesheet.model.Employee;
 import jfang.project.timesheet.model.WeekSheet;
+
+import java.util.List;
 
 public interface TimesheetService {
 

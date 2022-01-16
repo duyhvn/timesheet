@@ -9,8 +9,6 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
 import jfang.project.timesheet.model.DaySheet;
 import jfang.project.timesheet.model.Employee;
 import jfang.project.timesheet.model.Project;

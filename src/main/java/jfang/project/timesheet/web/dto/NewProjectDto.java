@@ -1,9 +1,5 @@
 package jfang.project.timesheet.web.dto;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Date;
-
 /**
  * Created by jfang on 1/23/16.
  */

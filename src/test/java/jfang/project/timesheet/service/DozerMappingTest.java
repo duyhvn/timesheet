@@ -1,13 +1,11 @@
 package jfang.project.timesheet.service;
 
 import static org.junit.Assert.assertEquals;
-import jfang.project.timesheet.config.DataAccessConfig;
-import jfang.project.timesheet.config.DataSourceConfig;
+
 import jfang.project.timesheet.config.ServiceConfig;
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.model.Project;
 import jfang.project.timesheet.model.User;
-import jfang.project.timesheet.utility.StringProecessUtil;
 import jfang.project.timesheet.web.dto.NewProjectDto;
 import jfang.project.timesheet.web.dto.UserForm;
 

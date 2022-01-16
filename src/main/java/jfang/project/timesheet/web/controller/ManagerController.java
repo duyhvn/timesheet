@@ -1,13 +1,5 @@
 package jfang.project.timesheet.web.controller;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import javax.annotation.Resource;
-
-import org.dozer.Mapper;
 import jfang.project.timesheet.constant.Constants;
 import jfang.project.timesheet.constant.ResponseStatus;
 import jfang.project.timesheet.model.Employee;
@@ -18,17 +10,30 @@ import jfang.project.timesheet.service.HumanResourceService;
 import jfang.project.timesheet.service.ProjectService;
 import jfang.project.timesheet.service.TimesheetService;
 import jfang.project.timesheet.service.UserService;
-import jfang.project.timesheet.web.dto.*;
-
+import jfang.project.timesheet.web.dto.AjaxResponseStatus;
+import jfang.project.timesheet.web.dto.EmployeeResponseDto;
+import jfang.project.timesheet.web.dto.NewEmployeeDto;
+import jfang.project.timesheet.web.dto.NewProjectDto;
+import jfang.project.timesheet.web.dto.ProjSelectedEmpDto;
+import jfang.project.timesheet.web.dto.ProjectDto;
+import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 @Controller
